@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Practice Before Patients – Virteasy White Paper | Saratoga</title>
-<meta name="description" content="Free white paper: what 18 studies and 2 reviews on Virteasy haptic simulation mean for learning pathways and productivity in dental schools.">
+<meta name="description" content="Free white paper for the Deans attending the ADEA Deans' Meeting: what 22 studies and 3 reviews on Virteasy haptic simulation mean for learning pathways and productivity in dental schools.">
 <meta property="og:title" content="Practice Before Patients – the Virteasy white paper">
-<meta property="og:description" content="18 studies, 2 reviews, one clear answer on where haptic simulation fits in a dental curriculum. Download the free white paper.">
+<meta property="og:description" content="22 studies, 3 reviews, one clear answer on where haptic simulation fits in a dental curriculum. Download the free white paper.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@ a{color:var(--teal)}
 .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:60px;background:var(--paper);clip-path:ellipse(70% 100% at 50% 100%)}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
 .hero p.lead{font-size:1.2rem;color:var(--mist);max-width:34em}
-.event{display:inline-flex;gap:.6rem;align-items:center;border:1px solid rgba(214,227,232,.35);border-radius:999px;padding:.4rem 1rem;font-size:.85rem;color:var(--mist);margin:1.2rem 0 1.6rem}
+.event{display:inline-block;line-height:1.5;border:1px solid rgba(214,227,232,.35);border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:var(--mist);margin:1.2rem 0 1.6rem}
 .event b{color:var(--amber);font-weight:600}
 .proof{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2rem}
 .proof div{min-width:110px}
@@ -124,186 +124,215 @@ footer a{color:var(--mist)}
   .hero{padding:48px 0 80px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* language selector */
+.top .right{display:flex;align-items:center;gap:1.2rem}
+.lang{display:inline-flex;border:1.5px solid var(--mist);border-radius:999px;padding:3px;background:var(--white)}
+.lang button{font:600 .82rem 'IBM Plex Sans',sans-serif;letter-spacing:.06em;min-width:44px;min-height:34px;border:0;border-radius:999px;background:transparent;color:var(--teal);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--white)}
+.lang button:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.dean{display:inline-block;background:var(--amber);color:var(--ink);font-weight:600;font-size:.8rem;letter-spacing:.04em;border-radius:6px;padding:.25rem .7rem;margin-bottom:1rem}
+@media (max-width:600px){.top a.link{display:none}.top img{height:38px}}
 </style>
 </head>
 <body>
-
 <header class="top">
   <div class="wrap">
     <a href="https://www.saratogadental.it" aria-label="Saratoga, 50 years of human centered innovation"><img src="saratoga-logo.png" alt="Saratoga – 50 years, human centered innovation" width="1000" height="205"></a>
-    <a class="link" href="#download">Get the white paper</a>
+    <div class="right">
+      <a class="link" href="#download" data-i="getwp">Get the white paper</a>
+      <div class="lang" role="group" aria-label="Language / Lingua">
+        <button type="button" data-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
+        <button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
+      </div>
+    </div>
   </div>
 </header>
-
 <main>
-<!-- HERO -->
 <div class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">White paper · 2026</div>
+      <div class="eyebrow" data-i="eyebrow">White paper · 2026</div>
+      <div class="dean" data-i="dean">Edition for the Deans attending the ADEA Deans' Meeting</div>
       <h1>Practice Before Patients</h1>
-      <p class="lead">What the research on Virteasy haptic simulation means for learning pathways and operational productivity in dental schools.</p>
-      <div class="event">Presented at <b>ADEA BFACA 2026</b> · Baltimore · October 18–20</div>
+      <p class="lead" data-i="lead">What the research on Virteasy haptic simulation means for learning pathways and operational productivity in dental schools.</p>
+      <div class="event" data-i="event" data-html>Originally presented at <b>ADEA BFACA 2026</b> · Baltimore · October 18–20</div>
       <div class="proof" aria-label="Key figures">
-        <div><strong>18</strong><span>studies reviewed</span></div>
-        <div><strong>2</strong><span>systematic and scoping reviews</span></div>
-        <div><strong>232</strong><span>simulators in 70 institutions</span></div>
-        <div><strong>28</strong><span>countries</span></div>
+        <div><strong>22</strong><span data-i="p1">studies reviewed</span></div>
+        <div><strong>3</strong><span data-i="p2">systematic and scoping reviews</span></div>
+        <div><strong>249</strong><span data-i="p3">simulators in 70 institutions</span></div>
+        <div><strong>28</strong><span data-i="p4">countries</span></div>
       </div>
     </div>
-
     <div class="card" id="download">
       <div id="formBox">
-        <h2>Download the free white paper</h2>
-        <p class="sub">Instant access. A short summary for administrators is included.</p>
+        <h2 data-i="fh">Download the free white paper</h2>
+        <p class="sub" data-i="fs">Instant access. A short summary for deans and administrators is included.</p>
         <form id="wpForm" novalidate>
           <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="org">Institution</label><input id="org" name="institution" type="text" autocomplete="organization" required></div>
-          <div class="field"><label for="role">Your role</label>
+          <input type="hidden" name="lang" id="langField" value="en">
+          <div class="field"><label for="name" data-i="l_name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email" data-i="l_email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="org" data-i="l_org">Institution</label><input id="org" name="institution" type="text" autocomplete="organization" required></div>
+          <div class="field"><label for="role" data-i="l_role">Your role</label>
             <select id="role" name="role" required>
-              <option value="">Select…</option>
-              <option>Dean / Associate Dean</option>
-              <option>Program or course director</option>
-              <option>Faculty / Instructor</option>
-              <option>Simulation lab manager</option>
-              <option>Administrator / Operations</option>
-              <option>Other</option>
+              <option value="" data-i="r0">Select…</option>
+              <option data-i="r1" data-en="Dean / Associate Dean">Dean / Associate Dean</option>
+              <option data-i="r2" data-en="Program or course director">Program or course director</option>
+              <option data-i="r3" data-en="Faculty / Instructor">Faculty / Instructor</option>
+              <option data-i="r4" data-en="Simulation lab manager">Simulation lab manager</option>
+              <option data-i="r5" data-en="Administrator / Operations">Administrator / Operations</option>
+              <option data-i="r6" data-en="Other">Other</option>
             </select>
           </div>
           <label class="check" for="consent"><input id="consent" name="consent" type="checkbox" required>
-            <span>I agree that Saratoga may store my details to send me the white paper and follow up about Virteasy. I can withdraw at any time. See the <a href="https://www.saratogadental.it/en/privacy" target="_blank" rel="noopener">privacy policy</a>.</span></label>
-          <button class="btn" type="submit">Get the white paper
+            <span data-i="consent" data-html>I agree that Saratoga may store my details to send me the white paper and follow up about Virteasy. I can withdraw at any time. See the <a href="https://www.saratogadental.it/en/privacy" target="_blank" rel="noopener">privacy policy</a>.</span></label>
+          <button class="btn" type="submit"><span data-i="submit">Get the white paper</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
           </button>
           <p class="error" id="err" role="alert"></p>
-          <p class="note">PDF · free · no spam</p>
+          <p class="note" data-i="note">PDF · English edition · free · no spam</p>
         </form>
       </div>
       <div class="success" id="ok" aria-live="polite">
         <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></div>
-        <h2>Thank you</h2>
-        <p class="sub">Your white paper is ready.</p>
-        <a class="btn" id="dl" href="#" download>Download the PDF</a>
-        <p class="note">Visiting ADEA BFACA? Ask us for a live Virteasy demo.</p>
+        <h2 data-i="thanks">Thank you</h2>
+        <p class="sub" data-i="ready">Your white paper is ready.</p>
+        <a class="btn" id="dl" href="#" download data-i="dl">Download the PDF</a>
+        <p class="note" data-i="demo">Visiting ADEA? Ask us for a live Virteasy demo.</p>
       </div>
     </div>
   </div>
 </div>
-
-<!-- WHAT YOU WILL LEARN -->
 <section>
   <div class="wrap">
     <div class="intro">
-      <div class="eyebrow">Executive summary</div>
-      <h2>Simulation as a practice layer, not a replacement</h2>
-      <p>Across 18 studies and two reviews, virtual haptic simulation works best before the phantom head and the patient: students repeat procedures at any hour, with objective data on every attempt.</p>
+      <div class="eyebrow" data-i="s1e">Executive summary</div>
+      <h2 data-i="s1h">Simulation as an added practice layer, not a replacement</h2>
+      <p data-i="s1p">Across 18 studies and 3 reviews, virtual haptic simulation works best before the phantom head and the patient: students repeat procedures at any hour, with objective data on every attempt.</p>
     </div>
     <div class="findings">
-      <article class="finding"><h3>Learning pathway</h3><p>Randomized and comparative studies in implantology, endodontics and restorative dentistry report faster or better early skill, and lower stress and anxiety, when simulator practice comes first.</p></article>
-      <article class="finding"><h3>Productivity</h3><p>Objective scoring is documented. Gains in instructor time, consumables and lab scheduling are plausible but not yet measured in controlled studies, and a pilot can measure them.</p></article>
-      <article class="finding"><h3>Honest limits</h3><p>Not every result is favorable. A headset lowered performance in one study, and no study reports cost or long-term retention. The paper says so plainly.</p></article>
+      <article class="finding"><h3 data-i="f1h">Learning pathway</h3><p data-i="f1p">Randomized and comparative studies in implantology, endodontics and restorative dentistry report faster or better early skill, and lower stress and anxiety, when virtual simulator practice comes first.</p></article>
+      <article class="finding"><h3 data-i="f2h">Productivity</h3><p data-i="f2p">Objective scoring is documented. Gains in instructor time, consumables and lab scheduling are plausible but not yet measured in controlled studies, and a pilot can measure them.</p></article>
+      <article class="finding"><h3 data-i="f3h">Honest limits</h3><p data-i="f3p">Not every result is favorable. A headset lowered performance in one study, and productivity gains are still hypotheses. The paper says so plainly.</p></article>
     </div>
   </div>
 </section>
-
-<!-- PATHWAY -->
 <section class="path">
   <div class="wrap">
     <div class="intro">
-      <div class="eyebrow">The learning pathway</div>
-      <h2>Where simulation fits between theory and the clinic</h2>
-      <p>The research places the simulator in the middle of the path, between knowledge and supervised patient care.</p>
+      <div class="eyebrow" data-i="s2e">The learning pathway</div>
+      <h2 data-i="s2h">Where simulation fits between theory and the clinic</h2>
+      <p data-i="s2p">The research places the simulator in the middle of the path, between knowledge and supervised patient care.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="dot">1</div><div><h3>Orientation</h3><p>Anatomy, instruments and ergonomics on screen.</p></div></div>
-      <div class="step hl"><div class="dot">2</div><div><h3>Fundamentals</h3><p>Repeated drills in implant, cavity and access preparation.</p></div></div>
-      <div class="step hl"><div class="dot">3</div><div><h3>Feedback</h3><p>Objective scores and expert review of each attempt.</p></div></div>
-      <div class="step"><div class="dot">4</div><div><h3>Transfer</h3><p>Phantom-head work, with a planned transition period.</p></div></div>
-      <div class="step"><div class="dot">5</div><div><h3>Clinic</h3><p>Supervised patient care once the skill is shown.</p></div></div>
+      <div class="step"><div class="dot">1</div><div><h3 data-i="st1h">Orientation</h3><p data-i="st1p">Anatomy, instruments and ergonomics on screen.</p></div></div>
+      <div class="step hl"><div class="dot">2</div><div><h3 data-i="st2h">Fundamentals</h3><p data-i="st2p">Repeated drills in implant, cavity and access preparation.</p></div></div>
+      <div class="step hl"><div class="dot">3</div><div><h3 data-i="st3h">Feedback</h3><p data-i="st3p">Objective scores and expert review of each attempt.</p></div></div>
+      <div class="step"><div class="dot">4</div><div><h3 data-i="st4h">Transfer</h3><p data-i="st4p">Phantom-head work, with a planned transition period.</p></div></div>
+      <div class="step"><div class="dot">5</div><div><h3 data-i="st5h">Clinic</h3><p data-i="st5p">Supervised patient care once the skill is shown.</p></div></div>
     </div>
-    <p class="principle">Design principle: move students on by demonstrated competence, not hours logged.</p>
+    <p class="principle" data-i="princ">Design principle: move students on by demonstrated competence, not hours logged.</p>
   </div>
 </section>
-
-<!-- TAKEAWAYS + LIMITS -->
 <section>
   <div class="wrap split">
     <div>
-      <div class="eyebrow">For deans and administrators</div>
-      <h2>Four decisions you can take away</h2>
+      <div class="eyebrow" data-i="s3e">For deans and administrators</div>
+      <h2 data-i="s3h">Four decisions you can take away</h2>
       <ul class="list">
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Treat the simulator as an added practice step with entry and exit criteria for each skill, not as a substitute for phantom hours.</span></li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Prefer the headset-free set-up for complex tasks such as access cavity preparation.</span></li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Budget for faculty calibration and for a transition period back to conventional simulators.</span></li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Measure before you scale: run a 90-day pilot with KPIs for instructor hours, lab occupancy, consumables and time to competence.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-i="d1">Treat the virtual simulator as an added practice step with entry and exit criteria for each skill, not as a substitute for phantom hours.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-i="d2">Prefer the headset-free set-up for complex tasks such as access cavity preparation.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-i="d3">Budget for faculty calibration and for a transition period back to conventional simulators.</span></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14566E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span data-i="d4">Measure before you scale: run a 90-day pilot with KPIs for instructor hours, lab occupancy, consumables and time to competence.</span></li>
       </ul>
     </div>
     <aside class="honest">
-      <h3>Why you can trust it</h3>
-      <p>This is not a brochure. The paper reports what the evidence supports and what it does not.</p>
+      <h3 data-i="th">Why you can trust it</h3>
+      <p data-i="tp">This is not a brochure. The paper reports what the evidence supports and what it does not.</p>
       <ul>
-        <li>Unfavorable results are included, not filtered out.</li>
-        <li>Gaps are named: cost, long-term retention and patient outcomes are not yet studied.</li>
-        <li>Every claim is tied to a published source, listed in the references.</li>
-        <li>Installation figures come from a Virteasy installation list supplied for the paper (2015–2025) and are not independently verified.</li>
+        <li data-i="t1">Unfavorable results are included, not filtered out.</li><li data-i="t2">Gaps are named: productivity gains and long-term outcomes are not yet measured in controlled studies.</li><li data-i="t3">Every claim is tied to a published source, listed in the references.</li><li data-i="t4">Installation figures come from the Virteasy installation list supplied for the paper (2015–2026).</li>
       </ul>
     </aside>
   </div>
 </section>
-
-<!-- FINAL CTA -->
 <div class="cta">
   <div class="wrap">
-    <h2>Read it before your next curriculum meeting</h2>
-    <p>18 studies, 2 reviews and a 90-day pilot framework, in one short paper.</p>
-    <a class="btn" href="#download" id="ctaBtn">Download the white paper</a>
+    <h2 data-i="cta_h">Read it before your next curriculum meeting</h2>
+    <p data-i="cta_p">22 studies, 3 reviews and a 90-day pilot framework, in one short paper.</p>
+    <a class="btn" href="#download" id="ctaBtn" data-i="cta_b">Download the white paper</a>
   </div>
 </div>
 </main>
-
 <footer>
   <div class="wrap">
-    <div>© 2026 Saratoga · Exclusive distributor of Virteasy Dental, USA and Canada</div>
-    <div><a href="https://www.saratogadental.it/en/privacy" target="_blank" rel="noopener">Privacy policy</a></div>
+    <div data-i="foot">© 2026 Saratoga · Exclusive distributor of Virteasy Dental for Italy, Spain, North America and the Middle East</div>
+    <div><a id="privLink" data-i="priv" href="https://www.saratogadental.it/en/privacy" target="_blank" rel="noopener">Privacy policy</a></div>
   </div>
 </footer>
-
 <script>
 /* ---------- CONFIGURATION ---------- */
 var CONFIG = {
-  // Path or URL of the PDF, uploaded next to this page.
-  PDF_URL: "Practice_Before_Patients_by_Saratoga_ADEA_BFaqa_2026.pdf",
-  // Where lead data is sent (POST, JSON). Examples: a Make/Zapier webhook, a Lemlist/Attio endpoint,
-  // or a small form handler on the subdomain. Leave empty to skip sending (the download still works).
+  // One PDF per language, uploaded next to this page.
+  PDF: {
+    en: "Practice_Before_Patients_EN_Deans_Edition.pdf",
+    it: "Practice_Before_Patients_IT.pdf"
+  },
+  // Lead data goes here (POST, form-encoded). The payload includes "lang" (en|it) and "pdf".
   FORM_ENDPOINT: "https://hook.us2.make.com/939yfaocsfiuxrs16q26py15re9rdt96"
 };
+var I18N = {"en": {"title": "Practice Before Patients – Virteasy White Paper | Saratoga", "metadesc": "Free white paper for the Deans attending the ADEA Deans' Meeting: what 22 studies and 3 reviews on Virteasy haptic simulation mean for learning pathways and productivity in dental schools.", "ogt": "Practice Before Patients – the Virteasy white paper", "ogd": "22 studies, 3 reviews, one clear answer on where haptic simulation fits in a dental curriculum. Download the free white paper.", "getwp": "Get the white paper", "eyebrow": "White paper · 2026", "dean": "Edition for the Deans attending the ADEA Deans' Meeting", "lead": "What the research on Virteasy haptic simulation means for learning pathways and operational productivity in dental schools.", "event": "Originally presented at <b>ADEA BFACA 2026</b> · Baltimore · October 18–20", "p1": "studies reviewed", "p2": "systematic and scoping reviews", "p3": "simulators in 70 institutions", "p4": "countries", "fh": "Download the free white paper", "fs": "Instant access. A short summary for deans and administrators is included.", "l_name": "Full name", "l_email": "Work email", "l_org": "Institution", "l_role": "Your role", "r0": "Select…", "r1": "Dean / Associate Dean", "r2": "Program or course director", "r3": "Faculty / Instructor", "r4": "Simulation lab manager", "r5": "Administrator / Operations", "r6": "Other", "consent": "I agree that Saratoga may store my details to send me the white paper and follow up about Virteasy. I can withdraw at any time. See the <a href=\"https://www.saratogadental.it/en/privacy\" target=\"_blank\" rel=\"noopener\">privacy policy</a>.", "submit": "Get the white paper", "note": "PDF · English edition · free · no spam", "thanks": "Thank you", "ready": "Your white paper is ready.", "dl": "Download the PDF", "demo": "Visiting ADEA? Ask us for a live Virteasy demo.", "e_all": "Please complete all fields.", "e_mail": "Please enter a valid email address.", "e_cons": "Please accept the privacy consent to continue.", "e_fail": "Something went wrong. Please try again in a moment.", "s1e": "Executive summary", "s1h": "Simulation as an added practice layer, not a replacement", "s1p": "Across 18 studies and 3 reviews, virtual haptic simulation works best before the phantom head and the patient: students repeat procedures at any hour, with objective data on every attempt.", "f1h": "Learning pathway", "f1p": "Randomized and comparative studies in implantology, endodontics and restorative dentistry report faster or better early skill, and lower stress and anxiety, when virtual simulator practice comes first.", "f2h": "Productivity", "f2p": "Objective scoring is documented. Gains in instructor time, consumables and lab scheduling are plausible but not yet measured in controlled studies, and a pilot can measure them.", "f3h": "Honest limits", "f3p": "Not every result is favorable. A headset lowered performance in one study, and productivity gains are still hypotheses. The paper says so plainly.", "s2e": "The learning pathway", "s2h": "Where simulation fits between theory and the clinic", "s2p": "The research places the simulator in the middle of the path, between knowledge and supervised patient care.", "st1h": "Orientation", "st1p": "Anatomy, instruments and ergonomics on screen.", "st2h": "Fundamentals", "st2p": "Repeated drills in implant, cavity and access preparation.", "st3h": "Feedback", "st3p": "Objective scores and expert review of each attempt.", "st4h": "Transfer", "st4p": "Phantom-head work, with a planned transition period.", "st5h": "Clinic", "st5p": "Supervised patient care once the skill is shown.", "princ": "Design principle: move students on by demonstrated competence, not hours logged.", "s3e": "For deans and administrators", "s3h": "Four decisions you can take away", "d1": "Treat the virtual simulator as an added practice step with entry and exit criteria for each skill, not as a substitute for phantom hours.", "d2": "Prefer the headset-free set-up for complex tasks such as access cavity preparation.", "d3": "Budget for faculty calibration and for a transition period back to conventional simulators.", "d4": "Measure before you scale: run a 90-day pilot with KPIs for instructor hours, lab occupancy, consumables and time to competence.", "th": "Why you can trust it", "tp": "This is not a brochure. The paper reports what the evidence supports and what it does not.", "t1": "Unfavorable results are included, not filtered out.", "t2": "Gaps are named: productivity gains and long-term outcomes are not yet measured in controlled studies.", "t3": "Every claim is tied to a published source, listed in the references.", "t4": "Installation figures come from the Virteasy installation list supplied for the paper (2015–2026).", "cta_h": "Read it before your next curriculum meeting", "cta_p": "22 studies, 3 reviews and a 90-day pilot framework, in one short paper.", "cta_b": "Download the white paper", "foot": "© 2026 Saratoga · Exclusive distributor of Virteasy Dental for Italy, Spain, North America and the Middle East", "priv": "Privacy policy", "privurl": "https://www.saratogadental.it/en/privacy"}, "it": {"title": "Practice Before Patients – White paper Virteasy | Saratoga", "metadesc": "White paper gratuito per i Presidenti dei Corsi di Laurea in Odontoiatria: cosa dicono 22 studi e 3 revisioni sulla simulazione aptica Virteasy per i percorsi di apprendimento e la produttività operativa.", "ogt": "Practice Before Patients – il white paper Virteasy", "ogd": "22 studi, 3 revisioni, una risposta chiara su dove si colloca la simulazione aptica nel curriculum odontoiatrico. Scarica il white paper gratuito.", "getwp": "Scarica il white paper", "eyebrow": "White paper · 2026", "dean": "Edizione per i Presidenti dei Corsi di Laurea e i Direttori di Dipartimento", "lead": "Cosa dice la ricerca sulla simulazione aptica Virteasy per i percorsi di apprendimento e la produttività operativa nei corsi di laurea in Odontoiatria.", "event": "Presentato in origine all'<b>ADEA BFACA 2026</b> · Baltimora · 18–20 ottobre", "p1": "studi esaminati", "p2": "revisioni sistematiche e di scoping", "p3": "simulatori in 70 istituzioni", "p4": "paesi", "fh": "Scarica il white paper gratuito", "fs": "Accesso immediato. Include una sintesi per presidenti e direttori.", "l_name": "Nome e cognome", "l_email": "Email di lavoro", "l_org": "Ateneo / istituzione", "l_role": "Il tuo ruolo", "r0": "Seleziona…", "r1": "Preside / Presidente di Corso di Laurea", "r2": "Direttore di corso o di dipartimento", "r3": "Docente / Istruttore", "r4": "Responsabile laboratorio di simulazione", "r5": "Amministrazione / Operations", "r6": "Altro", "consent": "Acconsento al trattamento dei miei dati da parte di Saratoga per l'invio del white paper e per essere ricontattato su Virteasy. Posso revocare il consenso in qualsiasi momento. Vedi l'<a href=\"https://www.saratogadental.it/privacy\" target=\"_blank\" rel=\"noopener\">informativa privacy</a>.", "submit": "Scarica il white paper", "note": "PDF · edizione italiana · gratuito · niente spam", "thanks": "Grazie", "ready": "Il tuo white paper è pronto.", "dl": "Scarica il PDF", "demo": "Vuoi vedere Virteasy dal vivo? Chiedici una dimostrazione.", "e_all": "Compila tutti i campi.", "e_mail": "Inserisci un indirizzo email valido.", "e_cons": "Per continuare è necessario accettare il consenso privacy.", "e_fail": "Qualcosa è andato storto. Riprova tra un momento.", "s1e": "Sintesi", "s1h": "La simulazione come livello di pratica aggiuntivo, non come sostituto", "s1p": "In 18 studi e 3 revisioni, la simulazione aptica virtuale funziona meglio prima del manichino e del paziente: gli studenti ripetono le procedure a qualsiasi ora, con dati oggettivi su ogni tentativo.", "f1h": "Percorso di apprendimento", "f1p": "Studi randomizzati e comparativi in implantologia, endodonzia e odontoiatria restaurativa riportano un'abilità iniziale più rapida o migliore, e meno stress e ansia, quando la pratica sul simulatore virtuale viene per prima.", "f2h": "Produttività", "f2p": "Il punteggio oggettivo è documentato. I vantaggi in tempo dei docenti, materiali di consumo e pianificazione del laboratorio sono plausibili ma non ancora misurati in studi controllati; un pilota può misurarli.", "f3h": "Limiti dichiarati", "f3p": "Non tutti i risultati sono favorevoli. Un visore ha peggiorato la prestazione in uno studio e i guadagni di produttività restano ipotesi. Il documento lo dice con chiarezza.", "s2e": "Il percorso di apprendimento", "s2h": "Dove si colloca la simulazione tra teoria e clinica", "s2p": "La ricerca colloca il simulatore a metà del percorso, tra la conoscenza e l'assistenza supervisionata al paziente.", "st1h": "Orientamento", "st1p": "Anatomia, strumenti ed ergonomia a schermo.", "st2h": "Fondamenti", "st2p": "Esercizi ripetuti di preparazione implantare, cavità e accesso.", "st3h": "Feedback", "st3p": "Punteggi oggettivi e revisione esperta di ogni tentativo.", "st4h": "Transfer", "st4p": "Lavoro su manichino, con un periodo di transizione pianificato.", "st5h": "Clinica", "st5p": "Assistenza supervisionata al paziente una volta dimostrata l'abilità.", "princ": "Principio di progetto: far avanzare gli studenti per competenza dimostrata, non per ore svolte.", "s3e": "Per presidenti e direttori", "s3h": "Quattro decisioni da portare con sé", "d1": "Trattare il simulatore virtuale come un passaggio di pratica aggiuntivo, con criteri di ingresso e di uscita per ogni abilità, non come sostituto delle ore su manichino.", "d2": "Preferire la configurazione senza visore per i compiti complessi, come la preparazione della cavità di accesso.", "d3": "Prevedere un budget per la calibrazione dei docenti e per un periodo di transizione verso i simulatori convenzionali.", "d4": "Misurare prima di estendere: un pilota di 90 giorni con KPI su ore dei docenti, occupazione del laboratorio, materiali di consumo e tempo alla competenza.", "th": "Perché fidarsi", "tp": "Non è una brochure. Il documento riporta ciò che le evidenze sostengono e ciò che non sostengono.", "t1": "I risultati sfavorevoli sono inclusi, non filtrati.", "t2": "Le lacune sono dichiarate: i guadagni di produttività e gli esiti a lungo termine non sono ancora misurati in studi controllati.", "t3": "Ogni affermazione è collegata a una fonte pubblicata, elencata nei riferimenti.", "t4": "I dati sulle installazioni provengono dall'elenco delle installazioni Virteasy fornito per il documento (2015–2026).", "cta_h": "Leggilo prima del prossimo consiglio di corso", "cta_p": "22 studi, 3 revisioni e un quadro per un pilota di 90 giorni, in un breve documento.", "cta_b": "Scarica il white paper", "foot": "© 2026 Saratoga · Distributore esclusivo di Virteasy Dental per Italia, Spagna, Nord America e Medio Oriente", "priv": "Informativa privacy", "privurl": "https://www.saratogadental.it/privacy"}};
 /* ----------------------------------- */
 (function(){
-  var form=document.getElementById('wpForm'),err=document.getElementById('err');
+  var lang='en', form=document.getElementById('wpForm'), err=document.getElementById('err');
   var email=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function pick(){
+    try{var q=new URLSearchParams(location.search).get('lang'); if(q==='it'||q==='en') return q;}catch(e){}
+    try{var s=localStorage.getItem('wp_lang'); if(s==='it'||s==='en') return s;}catch(e){}
+    return (navigator.language||'en').toLowerCase().indexOf('it')===0?'it':'en';
+  }
+  function setLang(l){
+    lang=l; var D=I18N[l];
+    document.documentElement.lang=l;
+    document.title=D.title;
+    document.querySelector('meta[name=description]').setAttribute('content',D.metadesc);
+    document.querySelector('meta[property="og:title"]').setAttribute('content',D.ogt);
+    document.querySelector('meta[property="og:description"]').setAttribute('content',D.ogd);
+    document.querySelectorAll('[data-i]').forEach(function(el){
+      var k=el.getAttribute('data-i'); if(D[k]===undefined) return;
+      if(el.hasAttribute('data-html')) el.innerHTML=D[k]; else el.textContent=D[k];
+    });
+    document.getElementById('privLink').href=D.privurl;
+    document.getElementById('langField').value=l;
+    document.getElementById('dl').href=CONFIG.PDF[l];
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===l?'true':'false');});
+    err.classList.remove('on');
+    try{localStorage.setItem('wp_lang',l);}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+  setLang(pick());
   function fail(m){err.textContent=m;err.classList.add('on');}
   form.addEventListener('submit',function(e){
     e.preventDefault(); err.classList.remove('on');
-    var d=new FormData(form);
+    var D=I18N[lang], d=new FormData(form);
     if(d.get('website')) return; // honeypot
-    if(!d.get('name').trim()||!d.get('institution').trim()||!d.get('role')) return fail('Please complete all fields.');
-    if(!email.test(d.get('email').trim())) return fail('Please enter a valid email address.');
-    if(!form.consent.checked) return fail('Please accept the privacy consent to continue.');
-    var payload={name:d.get('name').trim(),email:d.get('email').trim(),institution:d.get('institution').trim(),role:d.get('role'),
-      consent:true,source:'whitepaper-virteasy',page:location.href,ts:new Date().toISOString()};
+    if(!d.get('name').trim()||!d.get('institution').trim()||!d.get('role')) return fail(D.e_all);
+    if(!email.test(d.get('email').trim())) return fail(D.e_mail);
+    if(!form.consent.checked) return fail(D.e_cons);
+    var sel=form.role.options[form.role.selectedIndex];
+    var payload={name:d.get('name').trim(),email:d.get('email').trim(),institution:d.get('institution').trim(),
+      role:sel.getAttribute('data-en')||d.get('role'),role_display:d.get('role'),
+      lang:lang,pdf:CONFIG.PDF[lang],consent:true,source:'whitepaper-virteasy',page:location.href,ts:new Date().toISOString()};
     function done(){
-      document.getElementById('dl').href=CONFIG.PDF_URL;
+      document.getElementById('dl').href=CONFIG.PDF[lang];
       document.getElementById('formBox').style.display='none';
       document.getElementById('ok').classList.add('on');
     }
     if(!CONFIG.FORM_ENDPOINT) return done();
-    var btn=form.querySelector('button'); btn.disabled=true;
-    // Form-encoded + no-cors: no preflight, works with Make webhooks from any origin.
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true;
     fetch(CONFIG.FORM_ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams(payload)})
       .then(function(){ done(); })
-      .catch(function(){ btn.disabled=false; fail('Something went wrong. Please try again in a moment.'); });
+      .catch(function(){ btn.disabled=false; fail(D.e_fail); });
   });
 })();
 </script>
